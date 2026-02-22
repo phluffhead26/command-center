@@ -4,7 +4,7 @@ import fs from 'fs';
 import path from 'path';
 
 async function getTaskData(): Promise<TaskData> {
-  const filePath = path.join(process.cwd(), '..', 'command-center', 'public', 'tasks.json');
+  const filePath = path.join(process.cwd(), 'public', 'tasks.json');
   const fileContents = fs.readFileSync(filePath, 'utf8');
   return JSON.parse(fileContents);
 }
